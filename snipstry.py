@@ -1,16 +1,13 @@
 import io
 import json
-
-with io.open("sample_dataset.json") as f:
-    sample_dataset = json.load(f)
-
 from snips_nlu import SnipsNLUEngine
+
+with io.open("train.json") as f:
+    sample_dataset = json.load(f)
 
 nlu_engine = SnipsNLUEngine()
 
 nlu_engine.fit(sample_dataset)
 
-import json
-
-parsing = nlu_engine.parse(u"Lights on!")
+parsing = nlu_engine.parse(u"Tell me in detail about Nishant?")
 print(json.dumps(parsing, indent=2))

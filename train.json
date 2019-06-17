@@ -155,6 +155,30 @@
           ]
         }
       ]
+    },"RPABot": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Solve the RPA challenge for me"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you please run the RPA script for me?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please do the RPA script for me?"
+            }
+          ]
+        }
+      ]
     },
     "sampleTurnOnLight": {
       "utterances": [

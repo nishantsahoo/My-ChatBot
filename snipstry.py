@@ -1,6 +1,7 @@
 import io
 import json
 from snips_nlu import SnipsNLUEngine
+import bs4
 
 with io.open("train.json") as f:
     sample_dataset = json.load(f)

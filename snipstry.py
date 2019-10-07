@@ -1,4 +1,5 @@
 import io
+import sys
 import json
 from snips_nlu import SnipsNLUEngine
 import bs4
@@ -10,5 +11,6 @@ nlu_engine = SnipsNLUEngine()
 
 nlu_engine.fit(sample_dataset)
 
-parsing = nlu_engine.parse(u"Tell me in detail about Nishant?")
-print(json.dumps(parsing, indent=2))
+parsing = nlu_engine.parse(str(" ".join(sys.argv[1:])))
+
+print(json.dumps(parsing, indent = 4))
